@@ -1,3 +1,5 @@
 public interface AnimalMove {
-    void move();
+    default void move() {
+        System.out.println(getClass().getSimpleName() + " moves");
+    }
 }

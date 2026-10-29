@@ -1,13 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        AnimalBehavior[] b = {
+                new Dog("A"),
+                new Pigeon("B"),
+                new Blowfish("C")
+        };
+        b[0].sleep();
+        b[1].sleep();
+        b[2].sleep();
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        Animal[] a = {
+                new Bird("Bird"),
+                new Mammal("Mammal"),
+                new Fish("Fish"),
+                new Pigeon("B"),
+                new Dog("A"),
+                new Blowfish("C")
+        };
+
+        for (Animal x : a) {
+            x.move();
+        }
+
+        for (Animal x : a) {
+            AnimalName.name(x.getName());
+        }
     }
 }

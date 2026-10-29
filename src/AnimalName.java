@@ -1,3 +1,5 @@
 public interface AnimalName {
-    void name();
+    static void name(String name) {
+        System.out.println("Animal name: " + name);
+    }
 }
